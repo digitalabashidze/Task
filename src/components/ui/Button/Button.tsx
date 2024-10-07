@@ -1,4 +1,5 @@
 import styles from './Button.module.scss'
+import DownArrowIcon from '@images/icons/arrow-down.svg'
 
 type ButtonProps = {
 	label: string
@@ -6,8 +7,9 @@ type ButtonProps = {
 	className?: string
 	type?: 'button' | 'submit' | 'reset'
 	size?: 'small' | 'medium' | 'large'
-	variant?: 'primary' | 'secondary' | 'outlined'
+	variant?: 'primary' | 'secondary' | 'outlined' | 'see-more'
 	isActive?: boolean
+	isOpen?: boolean
 }
 
 const Button = ({
@@ -17,6 +19,7 @@ const Button = ({
 	size = 'medium',
 	variant = 'primary',
 	isActive = false,
+	isOpen = false,
 }: ButtonProps) => {
 	return (
 		<button
@@ -27,6 +30,11 @@ const Button = ({
 			onClick={onClick}
 		>
 			{label}
+			{variant === 'see-more' && (
+				<span className={`${styles.icon} ${isOpen ? styles.open : ''}`}>
+					<img src={DownArrowIcon} alt='Arrow icon' />
+				</span>
+			)}
 		</button>
 	)
 }

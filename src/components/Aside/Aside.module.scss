@@ -1,0 +1,25 @@
+.aside {
+	width: 18.75rem;
+	padding: 1rem 0.75rem;
+	border-radius: 1rem;
+	background-color: var(--color-secondary);
+
+	.aside-title {
+		display: flex;
+		justify-content: center;
+
+		h3 {
+			padding-bottom: 1rem;
+			font-weight: 700;
+			color: var(--color-accent);
+		}
+	}
+
+	.options-container {
+		margin-bottom: 0.5rem;
+	}
+
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}

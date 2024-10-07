@@ -1,0 +1,25 @@
+.home {
+	padding-top: 5.31rem;
+
+	.home-layout {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 1.25rem;
+	}
+
+	@media (max-width: 937px) {
+		.home-layout {
+			grid-template-columns: 2fr 1fr;
+		}
+	}
+
+	@media (max-width: 767px) {
+		padding-top: 3.75rem;
+
+		.home-layout {
+			display: flex;
+			flex-direction: column-reverse;
+			gap: 1rem;
+		}
+	}
+}
