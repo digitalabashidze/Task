@@ -1,0 +1,52 @@
+.btn {
+	padding: 0.75rem 1rem;
+	font-weight: 700;
+	border-radius: 2.5rem;
+	background-color: transparent;
+	color: var(--color-base-font);
+	transition: all 0.3s ease-in;
+
+	/* Variants */
+
+	&--primary {
+		background-color: var(--color-accent);
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&--secondary {
+		border-bottom: 1px solid var(--color-accent);
+
+		&:hover {
+			background-color: var(--color-accent);
+		}
+	}
+
+	&--outlined {
+		border: 1px solid var(--color-accent);
+
+		&:hover {
+			background-color: var(--color-accent);
+		}
+	}
+
+	/* Sizes */
+
+	&--medium {
+		padding: 0.625rem 1rem;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	&--large {
+		padding: 0.75rem 1rem;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	&.active {
+		background-color: var(--color-accent);
+	}
+}

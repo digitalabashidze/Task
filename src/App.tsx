@@ -1,7 +1,11 @@
-function App() {
+import Button from './components/ui/Button/Button'
+
+const App = () => {
 	return (
 		<>
-			<h1>Hello</h1>
+			<Button label='All Games' />
+			<Button label='All Games' variant='secondary' />
+			<Button label='All Games' variant='outlined' />
 		</>
 	)
 }
