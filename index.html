@@ -1,13 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task</title>
+		<script>
+			// Load colors from localStorage or use defaults
+			;(function () {
+				const color1 = localStorage.getItem('color1') || '#189541'
+				const color2 = localStorage.getItem('color2') || '#00141e'
+				const color3 = localStorage.getItem('color3') || '#062733'
+
+				// Apply the colors to the root element (HTML)
+				document.documentElement.style.setProperty('--color-accent', color1)
+				document.documentElement.style.setProperty('--color-base', color2)
+				document.documentElement.style.setProperty('--color-secondary', color3)
+			})()
+		</script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
 </html>

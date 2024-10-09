@@ -1,0 +1,51 @@
+.nav-item {
+	.nav-link {
+		padding: 1.5rem 0.75rem;
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		color: var(--color-base-font);
+		font-size: 0.875rem;
+		font-weight: 700;
+		line-height: 1.25rem;
+		transition: all 0.3s ease;
+
+		.icon {
+			fill: var(--color-base-font);
+			transition: fill 0.3s ease;
+		}
+
+		&.active {
+			color: var(--color-accent);
+			border-bottom: 2px solid var(--color-accent);
+			background: linear-gradient(
+				0deg,
+				rgba(250, 251, 255, 0.3) 0%,
+				rgba(6, 39, 51, 0.3) 100%
+			);
+
+			.icon {
+				fill: var(--color-accent);
+			}
+		}
+	}
+
+	@media (max-width: 440px) {
+		.nav-link {
+			font-size: 0.75rem;
+
+			.icon {
+				width: 1.125rem;
+				height: 1.125rem;
+			}
+		}
+	}
+
+	@media (max-width: 410px) {
+		.nav-link {
+			.icon {
+				display: none;
+			}
+		}
+	}
+}

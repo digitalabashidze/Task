@@ -4,10 +4,11 @@ import Button from '../ui/Button/Button'
 import styles from './Aside.module.scss'
 
 const Aside = () => {
-	const [isExpanded, setIsExpanded] = useState(false)
+	const [isExpanded, setIsExpanded] = useState<boolean>(false)
 
+	// Toggle function for showing more or fewer options
 	const handleToggle = () => {
-		setIsExpanded(!isExpanded)
+		setIsExpanded(prevState => !prevState)
 	}
 
 	return (
@@ -17,9 +18,11 @@ const Aside = () => {
 			</div>
 
 			<div className={styles['options-container']}>
+				{/* Pass a limit to the Options component */}
 				<Options limit={isExpanded ? undefined : 2} />
 			</div>
 
+			{/* Toggle Button for expanding or collapsing the options */}
 			<Button
 				label={isExpanded ? 'See Less' : 'See More'}
 				variant='see-more'

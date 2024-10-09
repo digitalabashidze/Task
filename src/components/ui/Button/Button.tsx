@@ -1,5 +1,5 @@
+import ArrowIcon from '../icons/ArrowIcon'
 import styles from './Button.module.scss'
-import DownArrowIcon from '@images/icons/arrow-down.svg'
 
 type ButtonProps = {
 	label: string
@@ -31,9 +31,7 @@ const Button = ({
 		>
 			{label}
 			{variant === 'see-more' && (
-				<span className={`${styles.icon} ${isOpen ? styles.open : ''}`}>
-					<img src={DownArrowIcon} alt='Arrow icon' />
-				</span>
+				<ArrowIcon className={`${styles.icon} ${isOpen ? styles.open : ''}`} />
 			)}
 		</button>
 	)

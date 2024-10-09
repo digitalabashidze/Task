@@ -1,28 +1,33 @@
-import styles from './Header.module.scss'
+import Button from '../ui/Button/Button'
 import HeaderImg from '@images/header-img.png'
 import HeaderImgMobile from '@images/header-mobile.png'
-import Button from '../ui/Button/Button'
+import styles from './Header.module.scss'
 
 const Header = () => {
 	return (
-		<div className={styles['header']}>
+		<header className={styles['header']}>
 			<div className={styles['header-content']}>
 				<div className={styles['desk']}>
+					{/* Heading and description */}
 					<h1>Fish'N Nudge Slot</h1>
 					<p>
-						Reel em in and nudge em up! Hook a live one and win bass-cinating
+						Reel 'em in and nudge 'em up! Hook a live one and win bass-cinating
 						prizes on the open waters.
 					</p>
 				</div>
+
+				{/* Play Button */}
 				<div className={styles['btn-container']}>
-					<Button label='Play' />
+					<Button label='Play' variant='primary' />
 				</div>
 			</div>
+
+			{/* Responsive Image for header */}
 			<picture className={styles['header-img']}>
 				<source media='(max-width: 767px)' srcSet={HeaderImgMobile} />
-				<img src={HeaderImg} alt={'Header Image'} />
+				<img src={HeaderImg} alt='Fishing slot machine banner' />
 			</picture>
-		</div>
+		</header>
 	)
 }
 

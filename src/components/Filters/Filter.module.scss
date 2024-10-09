@@ -1,0 +1,31 @@
+.filter {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 0.75rem;
+	overflow-x: auto; /* Allow horizontal scroll on smaller screens */
+	white-space: nowrap; /* Prevent buttons from wrapping */
+
+	.filter-btn {
+		flex-shrink: 0; /* Prevent shrinking */
+		padding: 0.75rem 1rem;
+		border-radius: 2.5rem;
+		border-bottom: 1px solid var(--color-accent);
+		transition: background-color 0.3s;
+
+		&.active {
+			background-color: var(--color-accent);
+			color: var(--color-light); /* Ensure text color changes on active */
+		}
+	}
+
+	@media (max-width: 1335px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media (max-width: 768px) {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch; /* For smoother scroll on mobile */
+	}
+}
