@@ -5,7 +5,7 @@
 - **Frontend**:
   - React
   - TypeScript
-  - Tailwind CSS (or custom CSS)
+  - SASS modules
 - **Routing**: React Router
 - **State Management**: React State
 - **Build Tool**: Vite
