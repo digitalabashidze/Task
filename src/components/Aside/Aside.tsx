@@ -12,7 +12,7 @@ const Aside = () => {
 	}
 
 	return (
-		<div className={styles['aside']}>
+		<aside className={styles['aside']}>
 			<div className={styles['aside-title']}>
 				<h3>Player’s Balance</h3>
 			</div>
@@ -29,7 +29,7 @@ const Aside = () => {
 				isOpen={isExpanded}
 				onClick={handleToggle}
 			/>
-		</div>
+		</aside>
 	)
 }
 
