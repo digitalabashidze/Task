@@ -21,6 +21,7 @@ const ColorWheelIcon = ({
 			height={height}
 			viewBox='0 0 96 96'
 		>
+			<title>Color picker</title>
 			<path
 				fill='#4CAF50'
 				opacity='1.000000'

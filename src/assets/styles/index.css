@@ -17,9 +17,21 @@ h1 {
 	font-weight: 900;
 }
 
+@media (max-width: 425px) {
+	h1 {
+		font-size: 1.375rem;
+	}
+}
+
 h2 {
 	font-size: 1.5rem;
 	font-weight: 700;
+}
+
+@media (max-width: 425px) {
+	h2 {
+		font-size: 1.25rem;
+	}
 }
 
 .container {
