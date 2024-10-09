@@ -1,6 +1,6 @@
 import OptionItem from './OptionItem'
 import DiamondIcon from '@images/icons/diamond.svg'
-import LightningIcon from '@images/icons/lightning.svg'
+import LightningIcon from '@images/icons/Lightning.svg'
 import styles from './Options.module.scss'
 
 const options = [
